@@ -1,1 +1,1 @@
-web: gunicorn meinprojekt.wsgi:application --log-file -
+web: gunicorn contactform.wsgi:application --log-file -
