@@ -1,0 +1,9 @@
+<h1>Kontaktieren Sie uns</h1>
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <div>
+      <button type="submit">Absenden</button>
+    </div>
+</form> 
+
