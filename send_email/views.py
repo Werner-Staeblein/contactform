@@ -15,14 +15,15 @@ def contact_view(request):
             message = form.cleaned_data['message']
         
             try:
-                # Using the email entered by the user as the sender
+                # Including the sender's email address in the message body
+                message_with_email = f"Sender's Email: {email}\n\n{message}"
+                
                 send_mail(
                     subject,
-                    message,
+                    message_with_email,
                     email,  # Use the user's email as the sender
-                    ['codeinstitutetest0@gmail.com']  # Your email as the recipient
+                    ['codinstitute0@gmail.com']  # Your email as the recipient
                 )
-
             except BadHeaderError:
                 return HttpResponse('Invalid header found.')
             return redirect('form_success')
