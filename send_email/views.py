@@ -20,8 +20,9 @@ def contact_view(request):
                     subject,
                     message,
                     email,  # Use the user's email as the sender
-                    ['codinstitute0@gmail.com']  # Your email as the recipient
+                    ['codeinstitutetest0@gmail.com']  # Your email as the recipient
                 )
+
             except BadHeaderError:
                 return HttpResponse('Invalid header found.')
             return redirect('form_success')
